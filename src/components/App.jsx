@@ -5,19 +5,8 @@ import { FeedbackOptions } from 'components/FeedbackOptions/FeedbackOptions.jsx'
 import { Notification } from 'components/Notifications/Notifications';
 
 export class App extends React.Component {
-  static defaultProps = {
-    goodInitialValue: 0,
-    neutralInitialValue: 0,
-    badInitialValue: 0,
-  };
-
-  static propTypes = {
-    // тут описуємо пропи
-  };
-  // state = {
-  //     value: this.props.initialValue,
-  // }
-  state = {
+  
+    state = {
     good: 0,
     neutral: 0,
     bad: 0,
@@ -54,7 +43,6 @@ export class App extends React.Component {
       >
         <Section title="Please leave feedback">
           <FeedbackOptions
-            FeedbackOptions
             options={options}
             onLeaveFeedback={this.onLeaveFeedback}
           ></FeedbackOptions>
